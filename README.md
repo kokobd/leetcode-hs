@@ -3,9 +3,9 @@
 Solutions to some leetcode problems implemented in Haskell.
 
 As of Dec 25, 2018, LeetCode doesn't support Haskell officially, so each
-solution has a corresponding C implementation, which are passed on LeetCode. I
-then test Haskell implementations against C implementations, to ensure Haskell
-version is correct.
+solution has a corresponding C implementation, which is passed on LeetCode.
+Haskell versions are tested against C versions, to ensure Haskell
+implementations are correct.
 
 For many problems, it's critical to get time and space complexity right. We use
 ghc profiling to make sure Haskell versions are not significantly slower than C
