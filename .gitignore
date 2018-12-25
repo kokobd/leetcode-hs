@@ -1,0 +1,6 @@
+.vscode/
+.idea/
+cmake-build*
+.stack-work/
+dist*/
+.ghc.environment.*

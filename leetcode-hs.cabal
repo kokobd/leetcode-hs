@@ -1,0 +1,46 @@
+cabal-version:       2.4
+name:                leetcode-hs
+version:             0.1.0.0
+synopsis:            Leetcode problems implemented in Haskell and C
+license:             BSD-3-Clause
+license-file:        LICENSE
+author:              Isumi Feng
+maintainer:          contact@zelinf.net
+copyright:           2018 Isumi Feng
+category:            Education
+extra-source-files:  CHANGELOG.md
+
+flag debug-c
+  default: False
+  manual: True
+
+library
+  hs-source-dirs: src
+  default-language: Haskell2010
+  build-depends:
+      base ^>=4.12
+    , text
+    , bytestring
+    , vector
+  exposed-modules:
+      LeetCode.P12
+  c-sources:
+      csrc/p12.c
+  if flag(debug-c)
+    cc-options: -g -O0
+
+test-suite leetcode-hs-test
+  type: exitcode-stdio-1.0
+  hs-source-dirs: test
+  main-is: Spec.hs
+  default-language: Haskell2010
+  other-modules:
+      LeetCode.P12Spec
+  build-depends:
+      base
+    , leetcode-hs
+    , text
+    , hspec
+    , QuickCheck
+  build-tool-depends:
+      hspec-discover:hspec-discover
