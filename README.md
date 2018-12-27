@@ -13,11 +13,7 @@ ones.
 
 ## Build and Development
 
-Please use [cabal new build][1]
-
-The code is tested with `cabal 2.4.1.0` and `GHC 8.6.2`.
+Please use [stack](https://docs.haskellstack.org/en/stable/README/)
 
 There is a special flag in this cabal package: `debug-c`. Enable this flag to
 turn on `-g -O0` options of `gcc`. Then you can use `gdb` to debug C code.
-
-[1]: https://cabal.readthedocs.io/en/stable/nix-local-build-overview.html
