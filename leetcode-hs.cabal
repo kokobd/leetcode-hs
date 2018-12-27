@@ -1,7 +1,7 @@
 cabal-version:       2.4
 name:                leetcode-hs
 version:             0.1.0.0
-synopsis:            Leetcode problems implemented in Haskell and C
+synopsis:            Leetcode solutions implemented in Haskell and C
 license:             BSD-3-Clause
 license-file:        LICENSE
 author:              Isumi Feng

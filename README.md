@@ -1,6 +1,6 @@
 # leetcode-hs
 
-Solutions to some leetcode problems implemented in Haskell.
+LeetCode solutions implemented in Haskell and C.
 
 As of Dec 25, 2018, LeetCode doesn't support Haskell officially, so each
 solution has a corresponding C implementation, which is passed on LeetCode.
