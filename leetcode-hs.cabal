@@ -27,6 +27,8 @@ library
   c-sources:
       csrc/p12.c
       csrc/p13.c
+      csrc/p14.c
+      csrc/p15.c
   if flag(debug-c)
     cc-options: -g -O0
 
