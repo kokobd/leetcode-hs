@@ -4,7 +4,9 @@
 
 char *p14_longestCommonPrefix(char **strs, int strsSize) {
   if (strsSize <= 0) {
-    return "";
+    char *ret = malloc(1);
+    ret[0] = '\0';
+    return ret;
   }
   int j = 0;
   while (true) {

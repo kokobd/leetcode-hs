@@ -16,7 +16,6 @@ import qualified Data.Text          as Text
 import qualified Data.Text.Encoding as Text
 import           Data.Vector        (Vector)
 import qualified Data.Vector        as V
-import           Foreign
 import           Foreign.C
 import           System.IO.Unsafe   (unsafePerformIO)
 
@@ -25,7 +24,7 @@ romanToInt roman = romanToInt' (Text.unpack roman, romanTable, 0)
 
 romanToInt' :: (String, [Vector Text], Int) -> Int
 romanToInt' ("", [], !n) = n
-romanToInt' (s, [], !_) = error "invalid sequence"
+romanToInt' (_, [], !_) = error "invalid sequence"
 romanToInt' (s, (row:rows), !n) =
   case safeHead . catMaybes . V.toList . V.imap (\i p -> (,i) <$> stripPrefix (Text.unpack p) s) $ row of
     Nothing      -> error "Impossible code path"

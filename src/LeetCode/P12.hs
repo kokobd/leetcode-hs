@@ -6,7 +6,6 @@ module LeetCode.P12
   , cIntToRoman
   ) where
 
-import           Data.ByteString    (ByteString)
 import qualified Data.ByteString    as BS
 import           Data.Text          (Text)
 import qualified Data.Text          as Text
@@ -31,8 +30,6 @@ intDigits :: Int -> [Int]
 intDigits n
   | n <= 0 = []
   | otherwise = (n `mod` 10) : intDigits (n `div` 10)
-  where
-    base = 10
 
 digitToRoman :: Int -- ^digit
              -> Int -- ^index

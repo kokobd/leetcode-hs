@@ -16,6 +16,7 @@ flag debug-c
 library
   hs-source-dirs: src
   default-language: Haskell2010
+  ghc-options: -Wall
   build-depends:
       base
     , text
@@ -24,6 +25,7 @@ library
   exposed-modules:
       LeetCode.P12
     , LeetCode.P13
+    , LeetCode.P14
   c-sources:
       csrc/p12.c
       csrc/p13.c
@@ -37,9 +39,12 @@ test-suite leetcode-hs-test
   hs-source-dirs: test
   main-is: Spec.hs
   default-language: Haskell2010
+  ghc-options: -Wall
   other-modules:
       LeetCode.P12Spec
     , LeetCode.P13Spec
+    , LeetCode.P14Spec
+    , LeetCode.Test.Utils
   build-depends:
       base
     , leetcode-hs
