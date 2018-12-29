@@ -8,12 +8,15 @@ import qualified Data.Set            as Set
 import           LeetCode.P15
 import           LeetCode.Test.Utils (shouldWorkForSamples)
 import           Test.Hspec
+import           Test.QuickCheck
 
 spec :: Spec
 spec = do
-  describe "threeSum" $
+  describe "threeSum" $ do
     it "works for some known samples" $
       (toResult . threeSum) `shouldWorkForSamples` samples
+    it "works as cTreeSum do" $ property $
+      \xs -> (toResult . threeSum $ xs) `shouldBe` (toResult . cThreeSum $ xs)
   describe "cThreeSum" $
     it "works for some known samples" $
       (toResult . cThreeSum) `shouldWorkForSamples` samples
