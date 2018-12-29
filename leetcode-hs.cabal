@@ -22,10 +22,15 @@ library
     , text
     , bytestring
     , vector
+    , containers
+    , mtl
+    , transformers
   exposed-modules:
-      LeetCode.P12
+      LeetCode.Foreign
+    , LeetCode.P12
     , LeetCode.P13
     , LeetCode.P14
+    , LeetCode.P15
   c-sources:
       csrc/p12.c
       csrc/p13.c
@@ -44,6 +49,7 @@ test-suite leetcode-hs-test
       LeetCode.P12Spec
     , LeetCode.P13Spec
     , LeetCode.P14Spec
+    , LeetCode.P15Spec
     , LeetCode.Test.Utils
   build-depends:
       base
@@ -51,5 +57,6 @@ test-suite leetcode-hs-test
     , text
     , hspec
     , QuickCheck
+    , containers
   build-tool-depends:
       hspec-discover:hspec-discover

@@ -12,7 +12,7 @@ static int compareInt(const void *lhs, const void *rhs) {
   }
 }
 
-int **threeSum(int *nums, int numsSize, int *returnSize) {
+int **p15_threeSum(int *nums, int numsSize, int *returnSize) {
   size_t resultSize = 0;
   size_t resultCapacity = 10;
   int **results = malloc(resultCapacity * sizeof(int *));
