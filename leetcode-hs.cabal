@@ -38,6 +38,7 @@ library
       csrc/p15.c
       csrc/p16.c
       csrc/p17.c
+      csrc/p20.c
   if flag(debug-c)
     cc-options: -g -O0
 
