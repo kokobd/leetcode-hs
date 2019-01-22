@@ -33,6 +33,7 @@ library
     , LeetCode.P14
     , LeetCode.P15
     , LeetCode.P16
+    , LeetCode.P17
   c-sources:
       csrc/p12.c
       csrc/p13.c
@@ -57,6 +58,7 @@ test-suite leetcode-hs-test
     , LeetCode.P14Spec
     , LeetCode.P15Spec
     , LeetCode.P16Spec
+    , LeetCode.P17Spec
   build-depends:
       base
     , leetcode-hs
