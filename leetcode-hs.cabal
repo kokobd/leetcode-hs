@@ -9,9 +9,11 @@ maintainer:          contact@zelinf.net
 copyright:           2018 Isumi Feng
 category:            Education
 
-flag debug-c
-  default: False
-  manual: True
+custom-setup
+  setup-depends:
+      base
+    , Cabal
+    , cabal-bundle-clib
 
 library
   hs-source-dirs: src
@@ -35,16 +37,8 @@ library
     , LeetCode.P16
     , LeetCode.P17
     , LeetCode.P20
-  c-sources:
-      csrc/p12.c
-      csrc/p13.c
-      csrc/p14.c
-      csrc/p15.c
-      csrc/p16.c
-      csrc/p17.c
-      csrc/p20.c
-  if flag(debug-c)
-    cc-options: -g -O0
+  extra-libraries:
+      stdc++
 
 test-suite leetcode-hs-test
   type: exitcode-stdio-1.0

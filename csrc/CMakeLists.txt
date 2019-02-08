@@ -1,6 +1,17 @@
-cmake_minimum_required(VERSION 3.12)
-project(leetcode-hs VERSION 0.1)
+cmake_minimum_required(VERSION 3.13)
+project(leetcode-hs LANGUAGES C CXX)
 
-add_library(leetcode-hs STATIC
-  p12.c
-  )
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_C_STANDARD 11)
+
+add_library(leetcode_hs STATIC
+        src/p10.cpp
+        src/p12.c
+        src/p13.c
+        src/p14.c
+        src/p15.c
+        src/p16.c
+        src/p17.c
+        src/p20.c
+        src/uthash.h
+        )
