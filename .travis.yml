@@ -17,18 +17,23 @@ language: generic
 cache:
   directories:
   - $HOME/.stack
+  - $HOME/.local/bin
+  - $HOME/opt/cmake
 
 # Ensure necessary system libraries are present
 addons:
   apt:
     packages:
-      - libgmp-dev
+    - libgmp-dev
 
 before_install:
-# Download and unpack the stack executable
+# Create .local/bin directory
 - mkdir -p ~/.local/bin
 - export PATH=$HOME/.local/bin:$PATH
+# Download and unpack the stack executable
 - travis_retry curl -L https://get.haskellstack.org/stable/linux-x86_64.tar.gz | tar xz --wildcards --strip-components=1 -C ~/.local/bin '*/stack'
+# Install latest cmake
+- scripts/install_cmake.sh
 
 install:
 # Build dependencies
