@@ -8,6 +8,10 @@ author:              Isumi Feng
 maintainer:          contact@zelinf.net
 copyright:           2018 Isumi Feng
 category:            Education
+extra-source-files:
+  csrc/src/**/*.c
+  csrc/src/**/*.cpp
+  csrc/src/**/*.h
 
 custom-setup
   setup-depends:
@@ -36,6 +40,7 @@ library
     , LeetCode.P15
     , LeetCode.P16
     , LeetCode.P17
+    , LeetCode.P19
     , LeetCode.P20
   extra-libraries:
       stdc++
@@ -54,6 +59,7 @@ test-suite leetcode-hs-test
     , LeetCode.P15Spec
     , LeetCode.P16Spec
     , LeetCode.P17Spec
+    , LeetCode.P19Spec
     , LeetCode.P20Spec
   build-depends:
       base

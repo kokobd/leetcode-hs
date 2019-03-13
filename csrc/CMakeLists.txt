@@ -11,6 +11,7 @@ add_library(leetcode_hs STATIC
         src/p15.c
         src/p16.c
         src/p17.c
+        src/p19.cpp
         src/p20.c
         src/uthash.h
         )
