@@ -5,7 +5,6 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_C_STANDARD 11)
 
 add_library(leetcode_hs STATIC
-        src/p10.cpp
         src/p12.c
         src/p13.c
         src/p14.c
