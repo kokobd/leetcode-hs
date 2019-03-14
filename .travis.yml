@@ -23,8 +23,11 @@ cache:
 # Ensure necessary system libraries are present
 addons:
   apt:
+    sources:
+    - ubuntu-toolchain-r-test
     packages:
     - libgmp-dev
+    - g++-7
 
 before_install:
 # Create .local/bin directory
@@ -33,7 +36,10 @@ before_install:
 # Download and unpack the stack executable
 - travis_retry curl -L https://get.haskellstack.org/stable/linux-x86_64.tar.gz | tar xz --wildcards --strip-components=1 -C ~/.local/bin '*/stack'
 # Install latest cmake
+- export PATH="$HOME/opt/cmake/bin":$PATH
 - scripts/install_cmake.sh
+- export CC=gcc-7
+- export CXX=gcc-7
 
 install:
 # Build dependencies
