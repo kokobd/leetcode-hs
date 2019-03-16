@@ -13,6 +13,7 @@ add_library(leetcode_hs STATIC
         src/p17.c
         src/p19.cpp
         src/p20.c
+        src/p21.cpp
         src/uthash.h
         )
 set_property(TARGET leetcode_hs PROPERTY POSITION_INDEPENDENT_CODE ON)
